@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import Button from './Components/button'
+import React from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <h1>Contador</h1>
-      <div className="card">
-       <Button/>
-      </div>
-    </>
-  )
+interface Props {
+  buyList: string[];
 }
 
-export default App
+const ShoppingList: React.FC<Props> = ({ buyList }) => {
+  return (
+    <div>
+      <h2>Compras de la semana</h2>
+      <ul>
+        {buyList.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ShoppingList;
