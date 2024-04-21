@@ -1,20 +1,17 @@
-import React from 'react';
+import './App.css'
+import AvatarCard from './Components/AvatarCard'
 
-interface Props {
-  buyList: string[];
+function App() {
+
+
+  return (
+    <>
+    
+      <div className='card'>
+       <AvatarCard/>
+      </div>
+    </>
+  )
 }
 
-const ShoppingList: React.FC<Props> = ({ buyList }) => {
-  return (
-    <div>
-      <h2>Compras de la semana</h2>
-      <ul>
-        {buyList.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default ShoppingList;
+export default App
