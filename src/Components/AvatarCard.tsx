@@ -15,7 +15,7 @@ const AvatarImages: React.FC = () => {
         <h2>Random Avatar</h2>
       <img src={avatarUrl} alt="Avatar" style={{ width: '50%', height: 'auto' }} />
       <p>Descripcion</p>
-      <textarea
+      <textare
         value={description}
         onChange={handleDescriptionChange}
         style={{ width: '70%', height: '100px', resize:'none' }}
